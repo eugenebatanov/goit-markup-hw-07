@@ -1,0 +1,18 @@
+.logo {
+    color: var(--accent-color);
+
+    text-decoration: none;
+    font-family: raleway, cursive;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+}
+.studio {
+    &-header {
+        color: var(--black-logo-letters);
+    }
+
+    &-footer {
+        color: var(--primary-white-color);
+    }
+}

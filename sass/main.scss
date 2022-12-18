@@ -1,11 +1,10 @@
-@import './utils/vars';
-@import './base/common';
-@import './base/reset';
-@import './components/container';
+@import './utils/variables';
+@import './utils/common';
+@import './utils/reset';
+@import './layouts/logo';
 @import './layouts/header';
 @import './layouts/hero';
 @import './layouts/features';
-@import './layouts/whatdowedo';
 @import './layouts/team';
 @import './layouts/clients';
 @import './layouts/portfolio';
