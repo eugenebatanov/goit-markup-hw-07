@@ -22,128 +22,125 @@
   }
 }
 // Footer-contacts
-.address {
-  font-style: normal;
-  margin-top: 28px;
-  .map {
+.footer-contacts {
+  &__address {
+    font-style: normal;
+    margin-top: 28px;
+  }
+  &__map {
     color: var(--primary-white-color);
 
     margin-top: 0;
     margin-bottom: 0;
   }
-  .map,
-  .link {
+  &__map,
+  &__link {
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
   }
-  .link {
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.6);
-
-    display: block;
-
-    transition: color var(--time-function);
-    &:hover,
-    &:focus {
-      color: var(--accent-color);
-    }
-  }
-  .mail {
+  &__mail {
     margin-top: 12px;
     margin-bottom: 12px;
   }
 }
-// Footer-join
-.footer-join {
+
+.footer-contacts__link {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.6);
+
+  display: block;
+
+  transition: color var(--time-function);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+// Footer-social
+.footer-soc {
   margin-left: 70px;
   margin-top: 12px;
-  &-list {
+  &__list {
     display: flex;
     justify-content: center;
     align-items: center;
   }
+  &__icons {
+    fill: var(--primary-white-color);
+  }
 }
-
-.footer-soc-items {
+.footer-soc__items {
   width: 44px;
   height: 44px;
-}
-
-.footer-soc-items:not(:last-child) {
-  margin-right: 10px;
-}
-
-.footer-soc {
-  &-link {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.1);
-    transition: background-color var(--time-function);
-    &:hover,
-    &:focus {
-      background-color: var(--accent-color);
-    }
+  &:not(:last-child) {
+    margin-right: 10px;
   }
-  &-icons {
-      fill: var(--primary-white-color);
+}
+.footer-soc__link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color var(--time-function);
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
   }
 }
 // Footer-subscribe
 .footer-sub {
   margin-left: 93px;
   margin-top: 12px;
-}
-.sub-group {
-  margin-top: 20px;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-}
-.sub-input {
-  width: 358px;
-  height: 50px;
-  padding-left: 16px;
-  outline: none;
+  &__group {
+    margin-top: 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__input {
+    width: 358px;
+    height: 50px;
+    padding-left: 16px;
+    outline: none;
 
-  background-color: var(--footer-background-color);
-  color: var(--primary-white-color);
+    background-color: var(--footer-background-color);
+    color: var(--primary-white-color);
 
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-  border-radius: 4px;
-}
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+  }
+  &__btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 
-.sub-btn {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+    margin-left: 12px;
+    width: 200px;
+    height: 50px;
 
-  margin-left: 12px;
-  width: 200px;
-  height: 50px;
+    background-color: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border-style: none;
 
-  background-color: var(--accent-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  border-style: none;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.06em;
+    color: var(--primary-white-color);
 
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 30px;
-  letter-spacing: 0.06em;
-  color: var(--primary-white-color);
-
-  cursor: pointer;
-}
-
-.sub-icon {
-  margin-left: 10px;
-  fill: var(--primary-white-color);
+    cursor: pointer;
+  }
+  &__icon {
+    margin-left: 10px;
+    fill: var(--primary-white-color);
+  }
 }

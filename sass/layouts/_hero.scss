@@ -10,12 +10,12 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  .container {
+  &__container {
     padding-top: 200px;
     padding-bottom: 200px;
     text-align: center;
   }
-  .title {
+  &__title {
     color: var(--primary-white-color);
 
     font-weight: 900;
