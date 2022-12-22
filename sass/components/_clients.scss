@@ -1,7 +1,5 @@
 .clients {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-align-justify;
   &__icons {
     fill: var(--inactive-icon);
     transition: fill var(--time-function);
@@ -28,9 +26,7 @@
 .clients__link {
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-align-justify;
 
   &:hover .clients__icons,
   &:focus .clients__icons {

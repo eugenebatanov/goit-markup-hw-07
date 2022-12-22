@@ -18,10 +18,7 @@
   &__title {
     color: var(--primary-white-color);
 
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
-    letter-spacing: 0.06em;
+    @include font ($fw: 900, $fs: 44, $lh: 60,$ls: 0.06);
     text-transform: uppercase;
 
     margin-top: 0;

@@ -18,9 +18,7 @@
   color: var(--primary-text-color);
 
   text-decoration: none;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
+  @include font ($fw: 500, $ls: 0.02);
 
   transition: color var(--time-function);
   &:hover,
@@ -57,9 +55,7 @@
 }
 .contact-nav__link {
   text-decoration: none;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
+  @include font ($fw: 500, $ls: 0.02);
 
   color: var(--secondary-text-color);
 

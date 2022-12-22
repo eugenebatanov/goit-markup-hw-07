@@ -1,0 +1,110 @@
+/* Filter */
+.filter-btn {
+  @include flex-align-justify;
+  margin-bottom: 34px;
+  &__item + &__item {
+    padding-left: 8px;
+  }
+}
+.filter-btn__link {
+  border-style: none;
+  border-radius: 4px;
+  padding: 6px 22px;
+  text-align: center;
+
+  color: var(--primary-text-color);
+  background-color: var(--secondary-background-color);
+
+  @include font ($fw: 500, $fs: 16, $lh: 26);
+  text-align: center;
+
+  transition: color var(--time-function), background-color var(--time-function),
+    box-shadow var(--time-function);
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    color: var(--primary-white-color);
+    background-color: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+/* Portfolio */
+.project {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--works-item-gap));
+  margin-top: calc(-1 * var(--works-item-gap));
+  &__text {
+    color: var(--secondary-text-color);
+    @include font ($fs: 16, $lh: 30);
+  }
+  &__title {
+    color: var(--primary-text-color);
+
+    @include font ($fw: 700, $fs: 18, $lh: 36, $ls: 0.06);
+  }
+}
+.project__item {
+  flex-basis: calc(100% / 3 - var(--works-item-gap));
+  margin-left: var(--works-item-gap);
+  margin-top: var(--works-item-gap);
+  transition: box-shadow var(--time-function);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+/* Card overlay */
+.project {
+  &__card {
+    overflow: hidden;
+  }
+  &__thumb {
+    position: relative;
+    overflow: hidden;
+  }
+}
+.project__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+
+  transform: translateY(100%);
+  transition: transform var(--time-function);
+
+  @include font ($fs: 18, $lh: 28);
+  color: var(--primary-white-color);
+
+  margin: 0;
+  padding: 63px 24px;
+}
+.project__link {
+  text-decoration: none;
+  &:hover .project__overlay,
+  &:focus .project__overlay {
+    transform: translateY(0);
+  }
+}
+
+/* Card title */
+.project {
+  &__case {
+    padding: 20px 24px;
+    border-left: 1px solid var(--card-border-line);
+    border-right: 1px solid var(--card-border-line);
+    border-bottom: 1px solid var(--card-border-line);
+  }
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  &__text {
+    margin-top: 4px;
+    margin-bottom: 0;
+  }
+}

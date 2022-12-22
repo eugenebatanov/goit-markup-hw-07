@@ -364,7 +364,7 @@
           <address class="footer-contacts__address">
             <p class="footer-contacts__map">м. Київ, пр-т Лесі Українки, 26</p>
             <a href="mailto:info@devstudio.com" class="footer-contacts__link footer-contacts__mail">info@devstudio.com</a>
-            <a href="tel:+380961111111" class="footer-contacts__link tel">+38 096 111 11 11</a>
+            <a href="tel:+380961111111" class="footer-contacts__link">+38 096 111 11 11</a>
           </address>
         </div>
         <div class="footer-soc">
@@ -422,19 +422,19 @@
     </footer>
     <!-- Modal window -->
     <div class="backdrop is-hidden" data-modal>
-      <div class="modal">
-        <button data-modal-close type="button" class="close-btn">
-          <svg class="close-icon" width="18" height="18">
+      <div class="modal backdrop__modal">
+        <button data-modal-close type="button" class="backdrop-btn">
+          <svg class="backdrop-btn__icon" width="18" height="18">
             <use href="./images/icons.svg#close"></use>
           </svg>
         </button>
-        <p class="form-title">Залиште свої дані, ми вам передзвонимо</p>
-        <form action="#">
-          <div class="input-group">
-            <label class="input-label" for="name">Ім'я</label>
-            <div class="input-wrap">
-              <input type="text" class="modal-input" name="name" id="name" required />
-              <svg class="input-icon" width="18" height="18">
+        <p class="modal__title">Залиште свої дані, ми вам передзвонимо</p>
+        <form action="#" class="form">
+          <div class="form__group">
+            <label class="form__label" for="name">Ім'я</label>
+            <div class="form__wrap">
+              <input type="text" class="form__input" name="name" id="name" required />
+              <svg class="form__icon" width="18" height="18">
                 <use href="./images/icons.svg#person-black"></use>
               </svg>
             </div>

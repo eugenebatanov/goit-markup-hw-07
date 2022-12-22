@@ -1,28 +1,14 @@
 @import './utils/variables';
 @import './utils/common';
 @import './utils/reset';
-@import './layouts/logo';
-@import './layouts/header';
-@import './layouts/hero';
-@import './layouts/features';
-@import './layouts/team';
-@import './layouts/clients';
-@import './layouts/portfolio';
-@import './layouts/footer';
-@import './layouts/modal';
+@import './utils/mixin';
 
-
-/* основной цвет текста #212121*/
-/* вторичный цвет теста #757575*/
-/* цвет акцента #2196F3*/
-/* белый цвет текста #FFFFFF*/
-/* черный цвет лого #000000*/
-/* серый цвет текста в футере rgba(255, 255, 255, 0.6)*/
-/* бэкграунд цвет основной #FFFFFF */
-/* бэкграунд цвет второстепенный #F5F4FA */
-/* бэкграунд цвет хедера #FFFFFF */
-/* бэкграунд цвет футера и героя #2F303A */
-/* цвет ссылок футера rgba(255, 255, 255, 0.6) */
-/* цвет неактивной иконки #AFB1B8 */
-/* Постоянный эффект тени 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2) */
-/* функция распределения времени cubic-bezier(0.4, 0, 0.2, 1) */
+@import './components/logo';
+@import './components/header';
+@import './components/hero';
+@import './components/features';
+@import './components/team';
+@import './components/clients';
+@import './components/portfolio';
+@import './components/footer';
+@import './components/modal';

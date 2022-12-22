@@ -9,8 +9,7 @@
     padding-left: 30px;
   }
   &__name {
-    font-size: 16px;
-    line-height: 1.19;
+    @include font ($fw: 500, $fs: 16, $lh: 19);
     text-align: center;
 
     margin-top: 0px;
@@ -22,9 +21,7 @@
     overflow: hidden;
   }
   &__text {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.19;
+    @include font ($fw: 400, $fs: 16, $lh: 19);
     text-align: center;
     margin: 0;
     padding-bottom: 16px;
@@ -38,9 +35,7 @@
 }
 
 .soc-list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-align-justify;
   &__icons {
     fill: var(--inactive-icon);
     transition: fill var(--time-function);
@@ -58,10 +53,8 @@
 .soc-list__link {
   width: 100%;
   height: 100%;
-  display: flex;
   border-radius: 50%;
-  justify-content: center;
-  align-items: center;
+  @include flex-align-justify;
   transition: background-color var(--time-function);
 
   &:hover,

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 :root {
   --primary-text-color: #212121;
   --secondary-text-color: #757575;
@@ -26,8 +25,6 @@ body {
   background-color: #ffffff;
   color: var(--primary-text-color);
   font-family: roboto, sans-serif;
-  letter-spacing: 0.03em;
-  font-weight: 500;
 }
 
 img {
@@ -208,8 +205,8 @@ button {
 }
 .hero__title {
   color: var(--primary-white-color);
-  font-weight: 900;
   font-size: 44px;
+  font-weight: 900;
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -357,10 +354,10 @@ button {
 .soc-list__link {
   width: 100%;
   height: 100%;
+  border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-radius: 50%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -431,18 +428,19 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 34px;
 }
-.filter-btn .item + .item {
+.filter-btn__item + .filter-btn__item {
   padding-left: 8px;
 }
-.filter-btn .link {
+
+.filter-btn__link {
   border-style: none;
   border-radius: 4px;
   padding: 6px 22px;
@@ -459,7 +457,7 @@ button {
   transition: color var(--time-function), background-color var(--time-function), box-shadow var(--time-function), -webkit-box-shadow var(--time-function);
   cursor: pointer;
 }
-.filter-btn .link:hover, .filter-btn .link:focus {
+.filter-btn__link:hover, .filter-btn__link:focus {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -476,7 +474,21 @@ button {
   margin-left: calc(-1 * var(--works-item-gap));
   margin-top: calc(-1 * var(--works-item-gap));
 }
-.project .item {
+.project__text {
+  color: var(--secondary-text-color);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.88;
+}
+.project__title {
+  color: var(--primary-text-color);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.project__item {
   -ms-flex-preferred-size: calc(33.3333333333% - var(--works-item-gap));
       flex-basis: calc(33.3333333333% - var(--works-item-gap));
   margin-left: var(--works-item-gap);
@@ -486,37 +498,21 @@ button {
   transition: box-shadow var(--time-function);
   transition: box-shadow var(--time-function), -webkit-box-shadow var(--time-function);
 }
-.project .item:hover, .project .item:focus {
+.project__item:hover, .project__item:focus {
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.project .service {
-  text-decoration: none;
-}
-.project .text {
-  color: var(--secondary-text-color);
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.88;
-}
-.project .title {
-  color: var(--primary-text-color);
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-}
 
 /* Card overlay */
-.card {
+.project__card {
   overflow: hidden;
 }
-.card .thumb {
+.project__thumb {
   position: relative;
   overflow: hidden;
 }
 
-.text-overlay {
+.project__overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -539,25 +535,29 @@ button {
   margin: 0;
   padding: 63px 24px;
 }
-.service:hover .text-overlay, .service:focus .text-overlay {
+
+.project__link {
+  text-decoration: none;
+}
+.project__link:hover .project__overlay, .project__link:focus .project__overlay {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
 
 /* Card title */
-.case .title {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.case .text {
-  margin-top: 4px;
-  margin-bottom: 0;
-}
-.card .case {
+.project__case {
   padding: 20px 24px;
   border-left: 1px solid var(--card-border-line);
   border-right: 1px solid var(--card-border-line);
   border-bottom: 1px solid var(--card-border-line);
+}
+.project__title {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.project__text {
+  margin-top: 4px;
+  margin-bottom: 0;
 }
 
 /* Footer */
@@ -570,6 +570,9 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .footer .title {
   margin: 0;
@@ -615,7 +618,6 @@ button {
 }
 
 .footer-soc {
-  margin-left: 70px;
   margin-top: 12px;
 }
 .footer-soc__list {
@@ -663,20 +665,10 @@ button {
 }
 
 .footer-sub {
-  margin-left: 93px;
   margin-top: 12px;
 }
 .footer-sub__group {
   margin-top: 20px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 .footer-sub__input {
   width: 358px;
@@ -919,19 +911,4 @@ button {
 .modal-send-btn {
   display: block;
   margin: 0 auto;
-}
-
-/* основной цвет текста #212121*/
-/* вторичный цвет теста #757575*/
-/* цвет акцента #2196F3*/
-/* белый цвет текста #FFFFFF*/
-/* черный цвет лого #000000*/
-/* серый цвет текста в футере rgba(255, 255, 255, 0.6)*/
-/* бэкграунд цвет основной #FFFFFF */
-/* бэкграунд цвет второстепенный #F5F4FA */
-/* бэкграунд цвет хедера #FFFFFF */
-/* бэкграунд цвет футера и героя #2F303A */
-/* цвет ссылок футера rgba(255, 255, 255, 0.6) */
-/* цвет неактивной иконки #AFB1B8 */
-/* Постоянный эффект тени 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2) */
-/* функция распределения времени cubic-bezier(0.4, 0, 0.2, 1) *//*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
