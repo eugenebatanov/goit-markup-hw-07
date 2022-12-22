@@ -21,16 +21,14 @@
 .footer-contacts {
   &__address {
     margin-top: 28px;
+    font-style: normal;
+    @include font ($lh: 24);
   }
   &__map {
     color: var(--primary-white-color);
 
     margin-top: 0;
     margin-bottom: 0;
-  }
-  &__map,
-  &__link {
-    @include font ($lh: 24);
   }
   &__mail {
     margin-top: 12px;

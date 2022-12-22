@@ -90,70 +90,73 @@
     fill: var(--accent-color);
   }
 }
-.modal .comment {
-  min-height: 120px;
-  max-height: 300px;
-  padding: 12px 16px;
-  resize: vertical;
-}
-.input {
-  &-group {
+
+.form {
+  &__group {
     margin-bottom: 10px;
   }
-  &-wrap {
+  &__wrap {
+    margin-top: 4px;
     position: relative;
   }
-  &-icon {
-    position: absolute;
-    left: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: fill var(--time-function);
-
-    &:hover {
-      fill: var(--accent-color);
-    }
-  }
-  &-label {
+  &__label {
     @include font($fs: 12, $lh: 14, $ls: 0.01);
     color: var(--secondary-text-color);
   }
+  &__comment {
+    margin-top: 4px;
+    min-height: 120px;
+    max-height: 300px;
+    padding: 12px 16px;
+    resize: vertical;
+  }
+}
+.form__icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: fill var(--time-function);
+
+  &:hover {
+    fill: var(--accent-color);
+  }
 }
 .policy {
-  @include flex-align-justify;
+  // @include flex-align-justify;
   margin-top: 20px;
   margin-bottom: 30px;
-  &-input {
-    position: absolute;
-    opacity: 0;
-    &:checked + label::before {
-      border: none;
-      background-image: url(../images/icon-check.jpg);
-      background-size: contain;
-      background-origin: border-box;
-    }
-  }
-  &-label {
-    @include flex-align-justify;
-    margin: auto;
-
-    @include font($lh: 24);
-    color: var(--secondary-text-color);
-    &::before {
-      content: '';
-      width: 16px;
-      height: 16px;
-      border: 2px solid var(--primary-text-color);
-      border-radius: 2px;
-      display: block;
-      margin-right: 8px;
-    }
-  }
-  &-link {
+  &__link {
     @include font($lh: 24);
 
     color: var(--accent-color);
     margin-left: 3px;
+  }
+}
+.policy__label {
+  margin: auto;
+  @include flex-align-justify;
+  @include font($lh: 24);
+  color: var(--secondary-text-color);
+
+  &::before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--primary-text-color);
+    border-radius: 2px;
+    display: block;
+    margin-right: 8px;
+  }
+}
+.policy__input {
+  position: absolute;
+  opacity: 0;
+  &:checked + label::before {
+    border: none;
+    background-image: url(../images/icon-check.jpg);
+    background-size: contain;
+    background-origin: border-box;
   }
 }
 .modal-send-btn {
